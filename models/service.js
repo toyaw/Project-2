@@ -12,6 +12,13 @@ const ServiceSchema = new mongoose.Schema({
     QuoteId: mongoose.Types.ObjectId
 })
 
+/* Step 3
+ *
+ * TODO: create collection API
+ * NOTE: skip this if you are not using mongoose
+ *
+ */
+const ServiceCollection = mongoose.model('Service', ServiceSchema)
 
 
 //Export the model
