@@ -7,9 +7,23 @@ const mongoose = require('./connection.js')
  * TODO: create model schema 
   */
 const ServiceSchema = new mongoose.Schema({
-    name: {type: String, required: true, max: 100},
-    price: {type: Number, required: true},
-    QuoteId: mongoose.Types.ObjectId
+    name: {
+        type: String, 
+        required: true, 
+        max: 100
+    },
+    price: {
+        type: Number, 
+        required: true
+},
+createdAt: {
+    type: Date,
+    default: Date.now
+},
+status: {
+    type: String,
+    default: "open"
+}
 })
 
 /* Step 3
@@ -25,17 +39,23 @@ const ServiceCollection = mongoose.model('Service', ServiceSchema)
  * TODO: delete this it's just a sample
  *
  */
-function getServiceByQuoteId(shopId) {
+function getAllServices() {
+    return ServiceCollection.find()
+  }
+ function getServiceByQuoteId(quoteId) {
     return ServiceCollection.find({quoteId: quoteId})
   }
   
   function addService(serviceObject) {
     return ServiceCollection.create(serviceObject)
   }
+
+  function getService() 
   
 //Export the model
 module.exports = {
 
+    getAllServices,
     getServiceByQuoteId,
     addService
   }
