@@ -6,7 +6,7 @@
 * Project: Hangman Game
 * Trello Board:(https://trello.com/b/XdsLJeOl/ask-a-master-mechanic)
 * GitHub: (https://github.com/toyaw/car-app) 
-* Heroku:(https://.com) 
+* Heroku:(https://git.heroku.com/kinder-mountie-61330.git) 
 
 ### About car-app ###
 * You must 
