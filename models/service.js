@@ -23,6 +23,7 @@ const ServiceCollection = mongoose.model('Service', ServiceSchema)
 
 //Export the model
 module.exports = {
+    
     getServiceByQuoteId,
     addService
   }
