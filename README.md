@@ -31,9 +31,9 @@
 * Do 
 
 ###### Wire Frame of Hangman Link ######
- ![Wireframe](https://i.imgur.com/wjv1ORO.jpg)
+ ![Wireframe]https://i.imgur.com/L6i7Lb3.png
 
 
  ###### ERD Image Link ######
- ![Wireframe](https://i.imgur.com/wjv1ORO.jpg)
+ ![Wireframe](https://i.imgur.com/rN1kl0x.png)
 
