@@ -56,6 +56,13 @@ function getAllServices() {
   function updateService(serviceId, updateService) {
     return ServiceCollection.findByIdAndUpdate(serviceId, updateService)
   } 
+
+  function deleteService(serviceId) {
+    return ServiceCollection.findByIdAndDelete(serviceId)
+  }
+  function deleteAllService() {
+    return ServiceCollection.deleteMany()
+  }
   
 //Export the model
 module.exports = {
