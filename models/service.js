@@ -43,19 +43,28 @@ function getAllServices() {
     return ServiceCollection.find()
   }
  function getServiceByQuoteId(quoteId) {
-    return ServiceCollection.find({quoteId: quoteId})
+    return ServiceCollection.findById({quoteId: quoteId})
+  }
+  function getService(serviceId) {
+    return ServiceCollection.findById(serviceId)
   }
   
-  function addService(serviceObject) {
+  function addNewService(serviceObject) {
     return ServiceCollection.create(serviceObject)
   }
 
-  function getService() 
+  function updateService(serviceId, updateService) {
+    return ServiceCollection.findByIdAndUpdate(serviceId, updateService)
+  } 
   
 //Export the model
 module.exports = {
 
     getAllServices,
     getServiceByQuoteId,
-    addService
+    getService,
+    addNewService,
+    updateService,
+    deleteService,
+    deleteAllServices
   }
