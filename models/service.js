@@ -20,11 +20,11 @@ createdAt: {
     type: Date,
     default: Date.now
 },
-status: {
-    type: String,
-    default: "open"
-},
-imgLink: String
+//status: {
+    //type: String,
+   // default: "open"
+//},
+//imgLink: String
 })
 
 /* Step 3
