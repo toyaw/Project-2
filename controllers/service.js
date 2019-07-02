@@ -78,17 +78,17 @@ serviceRouter.get('/:serviceId', (req, res) => {
     })
 })
 
-quoteRouter.put('/:quoteId', (req, res) => {
-  quoteApi.updateQuote(req.params.quoteId, req.body)
+serviceRouter.put('/:serviceId', (req, res) => {
+    serviceApi.updateService(req.params.serviceId, req.body)
     .then(() => {
-      res.redirect('/quote')
+      res.redirect('/service')
     })
 })
 
-quoteRouter.delete('/:quoteId', (req, res) => {
-  quoteApi.deleteQuote(req.params.quoteId)
+serviceRouter.delete('/:serviceId', (req, res) => {
+    serviceApi.deletService(req.params.serviceId)
     .then(() => {
-      res.redirect('/quotes')
+      res.redirect('/service')
     })
 })
 
@@ -98,5 +98,5 @@ quoteRouter.delete('/:quoteId', (req, res) => {
  *
  */
 module.exports = {
-  quoteRouter
+    serviceRouter
 }
