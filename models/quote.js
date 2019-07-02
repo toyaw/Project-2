@@ -30,7 +30,7 @@ imgLink: String
  * NOTE: skip this if you are not using mongoose
  *
  */
-const QuoteCollection = mongoose.model('Quote', QuoteSchema)
+const QuoteCollection = mongoose.model('Quote', quoteSchema)
 
 
 /* Step 4
