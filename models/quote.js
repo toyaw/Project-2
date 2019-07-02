@@ -7,7 +7,7 @@ const mongoose = require('./connection.js')
  * TODO: create model schema 
   */
 const ServiceSchema = new mongoose.Schema({
-    name: {
+    description: {
         type: String, 
         required: true, 
         max: 100
@@ -31,6 +31,7 @@ imgLink: String
  *
  */
 const QuoteCollection = mongoose.model('Quote', QuoteSchema)
+
 
 /* Step 4
  *

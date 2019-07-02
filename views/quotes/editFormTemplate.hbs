@@ -1,25 +1,25 @@
-<h2>Edit Issue Form</h2>
+<h2>Edit Quote Form</h2>
 
-<a href="/issues">Back To Home Page</a>
+<a href="/quote">Back To Home Page</a>
 
-<form method="POST" action="/issues/{{issue._id}}?_method=PUT">
+<form method="POST" action="/quote/{{quote._id}}?_method=PUT">
 <div>
   <!--
     Template for creating input form for a string object key called stringMember
     NOTE: for numeric input fields use `type="number"`
   -->
   <p>
-  <label for="issue-status">Status:</label>
-  <input type="text" value="{{issue.status}}" name="status" id="issue-status">
+  <label for="quote-status">Status:</label>
+  <input type="text" value="{{.quote}}" name="status" id="quote-status">
   </p>
   <p>
   <label for="create-date">Created At:</label>
-  <input type="text" value="{{issue.createdAt}}" name="createdAt" id="create-date" >
+  <input type="text" value="{{quote.createdAt}}" name="createdAt" id="create-date" >
   </p>
   <p>
-  <label for="issue-description">Description:</label>
-  <textarea name="description" id="issue-description" cols="30" rows="10">{{issue.description}}</textarea>
+  <label for="quote-description">Description:</label>
+  <textarea name="description" id="quote-description" cols="30" rows="10">{{quote.description}}</textarea>
   </p>
   </div>
-  <input type="submit" value="Update Issue" />
+  <input type="submit" value="Update Service" />
 </form>

@@ -1,0 +1,11 @@
+<h2>All Quote</h2>
+
+<a href="/quotes/new">Create a new issue</a>
+
+{{#each quotes}}
+<div>
+    <a href="/quotes/{{_id}}"><p>{{description}}</p></a>
+    <p><span>Status:</span> {{status}}</p>
+    <p><span>Date Created:</span> {{createdAt}}</p>
+</div>
+{{/each}}
