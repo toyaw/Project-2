@@ -43,23 +43,23 @@ function getAllQuote() {
  function getQuoteByQuoteId(quoteId) {
     return QuoteCollection.findById({quoteId: quoteId})
   }
-  function getService(serviceId) {
-    return ServiceCollection.findById(serviceId)
+  function getQuote(quoteId) {
+    return QuoteCollection.findById(quoteId)
   }
   
-  function addNewService(serviceObject) {
-    return ServiceCollection.create(serviceObject)
+  function addNewQuote(quoteObject) {
+    return QuoteCollection.create(quoteObject)
   }
 
-  function updateService(serviceId, updateService) {
+  function updateQuote(quoteId, updateQuote) {
     return ServiceCollection.findByIdAndUpdate(serviceId, updateService)
   } 
 
-  function deleteService(serviceId) {
-    return ServiceCollection.findByIdAndDelete(serviceId)
+  function deleteQuote(quoteId) {
+    return QuoteCollection.findByIdAndDelete(quoteId)
   }
   function deleteAllService() {
-    return ServiceCollection.deleteMany()
+    return QuoteCollection.deleteMany()
   }
   
 //Export the model
