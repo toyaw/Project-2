@@ -38,7 +38,7 @@ const quoteRouter = express.Router()
  * TODO: delete this handler; it's just a sample
  */ 
 quoteRouter.get('/', (req, res) => {
-  quoteApi.getShops()
+  quoteApi.getAllQuotes()
     .then((quotes) => {
       res.render('quotes/quotes', {quotes})
     })
@@ -48,7 +48,7 @@ quoteRouter.get('/', (req, res) => {
 })
 
 quoteRouter.post('/', (req, res) => {
-  quoteApi.addQuote(req.body)
+  quoteApi.addNewQuote(req.body)
     .then(() => {
       res.redirect('/quotes')
     })
@@ -69,7 +69,7 @@ quoteRouter.get('/:quoteId/edit', (req, res) => {
 })
 
 quoteRouter.get('/:quoteId', (req, res) => {
-  quoteApi.getQuote(req.params.quoteId)
+  quoteApi.getQuoteByQuoteId(req.params.quoteId)
     .then((quote) => {
       serviceApi.getServiceByQuoteId(quote._id)
         .then((service) => {

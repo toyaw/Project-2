@@ -7,21 +7,21 @@ const mongoose = require('./connection.js')
  * TODO: create model schema 
   */
 const QuoteSchema = new mongoose.Schema({
-    description: {
-        type: String, 
-        required: true, 
-        max: 100
-    },
-    price: {
-        type: Number, 
-        required: true
-},
-createdAt: {
+  description: {
+    type: String, 
+    required: true, 
+    max: 100
+  },
+  price: {
+    type: Number, 
+    required: true
+  },
+  createdAt: {
     type: Date,
     default: Date.now
-},
+  },
 
-imgLink: String
+  imgLink: String
 })
 
 /* Step 3
@@ -38,15 +38,12 @@ const QuoteCollection = mongoose.model('quote', QuoteSchema)
  * TODO: delete this it's just a sample
  *
  */
-function getAllQuote() {
+function getAllQuotes() {
     return QuoteCollection.find()
   }
  function getQuoteByQuoteId(quoteId) {
     return QuoteCollection.findById({quoteId: quoteId})
   }
-  //function getQuote(quoteId) {
-    //return QuoteCollection.findById(quoteId)
-  //}
   
   function addNewQuote(quoteObject) {
     return QuoteCollection.create(quoteObject)
@@ -66,7 +63,7 @@ function getAllQuote() {
 //Export the model
 module.exports = {
 
-    getAllQuote,
+    getAllQuotes,
     getQuoteByQuoteId,
     addNewQuote,
     updateQuote,
