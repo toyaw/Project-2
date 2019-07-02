@@ -62,7 +62,7 @@ quoteRouter.get('/new', (req, res) => {
 })
 
 quoteRouter.get('/:quoteId/edit', (req, res) => {
-  quotApi.getShop(req.params.quoteId)
+  quoteApi.getShop(req.params.quoteId)
     .then((quote) => {
       res.render('quotes/editQuoteForm', {quote})
     })
