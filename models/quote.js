@@ -6,7 +6,7 @@ const mongoose = require('./connection.js')
  *
  * TODO: create model schema 
   */
-const ServiceSchema = new mongoose.Schema({
+const QuoteSchema = new mongoose.Schema({
     description: {
         type: String, 
         required: true, 
@@ -30,7 +30,7 @@ imgLink: String
  * NOTE: skip this if you are not using mongoose
  *
  */
-const QuoteCollection = mongoose.model('Quote', quoteSchema)
+const QuoteCollection = mongoose.model('quote', QuoteSchema)
 
 
 /* Step 4
@@ -44,9 +44,9 @@ function getAllQuote() {
  function getQuoteByQuoteId(quoteId) {
     return QuoteCollection.findById({quoteId: quoteId})
   }
-  function getQuote(quoteId) {
-    return QuoteCollection.findById(quoteId)
-  }
+  //function getQuote(quoteId) {
+    //return QuoteCollection.findById(quoteId)
+  //}
   
   function addNewQuote(quoteObject) {
     return QuoteCollection.create(quoteObject)
@@ -59,7 +59,7 @@ function getAllQuote() {
   function deleteQuote(quoteId) {
     return QuoteCollection.findByIdAndDelete(quoteId)
   }
-  function deleteAllService() {
+  function deleteAllQuote() {
     return QuoteCollection.deleteMany()
   }
   
@@ -67,8 +67,7 @@ function getAllQuote() {
 module.exports = {
 
     getAllQuote,
-    getQouteByQuoteId,
-    getQuote,
+    getQuoteByQuoteId,
     addNewQuote,
     updateQuote,
     deleteQuote,

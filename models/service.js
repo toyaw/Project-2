@@ -74,5 +74,5 @@ module.exports = {
     addNewService,
     updateService,
     deleteService,
-    deleteAllServices
+    deleteAllService
   }
