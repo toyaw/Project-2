@@ -23,7 +23,8 @@ createdAt: {
 status: {
     type: String,
     default: "open"
-}
+},
+imgLink: String
 })
 
 /* Step 3
