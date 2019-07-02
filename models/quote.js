@@ -65,11 +65,11 @@ function getAllQuote() {
 //Export the model
 module.exports = {
 
-    getAllServices,
-    getServiceByQuoteId,
-    getService,
-    addNewService,
-    updateService,
-    deleteService,
-    deleteAllServices
+    getAllQuote,
+    getQouteByQuoteId,
+    getQuote,
+    addNewQuote,
+    updateQuote,
+    deleteQuote,
+    deleteAllQuote
   }
