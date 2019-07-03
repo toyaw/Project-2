@@ -26,7 +26,7 @@ const serviceApi = require('../models/service.js')
  * TODO: rename this from templateRouter to something that makes sense. (e.g:
  * `shopRouter`)
  */
-const quoteRouter = express.Router()
+const quoteRouter = express.Router({mergeParams: true})
 
 /* Step 4
  * 

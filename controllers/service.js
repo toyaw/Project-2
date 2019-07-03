@@ -38,7 +38,7 @@ const serviceRouter = express.Router()
  * TODO: delete this handler; it's just a sample
  */ 
 serviceRouter.get('/', (req, res) => {
-    serviceApi.getServices()
+    serviceApi.getAllServices()
     .then((services) => {
       res.render('quotes/quotes', {services})
     })
@@ -48,7 +48,7 @@ serviceRouter.get('/', (req, res) => {
 })
 
 serviceRouter.post('/', (req, res) => {
-    serviceApi.addService(req.body)
+    serviceApi.addNewService(req.body)
     .then(() => {
       res.redirect('/services')
     })

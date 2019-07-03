@@ -17,9 +17,14 @@
   <input type="text" value="{{quote.createdAt}}" name="createdAt" id="create-date" >
   </p>
   <p>
+  <label for="priority">Priority:</label>
+  <input type="text" name="priority" value="{{issue.priority}}" id="priority" >
+  </p>
+  <p>
+  <p>
   <label for="quote-description">Description:</label>
   <textarea name="description" id="quote-description" cols="30" rows="10">{{quote.description}}</textarea>
   </p>
   </div>
-  <input type="submit" value="Update Service" />
+  <input type="submit" value="Update Quote" />
 </form>

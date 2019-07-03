@@ -18,6 +18,7 @@ const methodOverride = require('method-override')
  *
  */
 const { quoteRouter } = require('./controllers/quote.js')
+const { serviceRouter } = require('./controllers/service.js')
 
 
 /* Step 3
@@ -61,7 +62,9 @@ app.set('view engine', 'hbs')
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
-app.use('/quotes', quoteRouter)
+
+ app.use('/services/:serviceId/quotes', quoteRouter)
+ app.use('/services', serviceRouter)
 
 /* Step 5
  *

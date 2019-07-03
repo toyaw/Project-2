@@ -20,6 +20,7 @@ const QuoteSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
+  serviceId: mongoose.Types.ObjectId,
 
   imgLink: String
 })
