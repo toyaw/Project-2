@@ -1,0 +1,30 @@
+<h2>Edit Service Form</h2>
+
+<a href="/service">Back To Home Page</a>
+
+<form method="POST" action="/service/{{service._id}}?_method=PUT">
+<div>
+  <!--
+    Template for creating input form for a string object key called stringMember
+    NOTE: for numeric input fields use `type="number"`
+  -->
+  <p>
+  <label for="service-status">Status:</label>
+  <input type="text" value="{{.service}}" name="status" id="service-status">
+  </p>
+  <p>
+  <label for="create-date">Created At:</label>
+  <input type="text" value="{{service.createdAt}}" name="createdAt" id="create-date" >
+  </p>
+  <p>
+  <label for="priority">Priority:</label>
+  <input type="text" name="priority" value="{{service.priority}}" id="priority" >
+  </p>
+  <p>
+  <p>
+  <label for="service-description">Description:</label>
+  <textarea name="description" id="quote-description" cols="30" rows="10">{{quote.description}}</textarea>
+  </p>
+  </div>
+  <input type="submit" value="Update Service" />
+</form>

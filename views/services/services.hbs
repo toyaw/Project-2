@@ -1,0 +1,11 @@
+<h2>All Service</h2>
+
+<a href="/service/new">Create a new service</a>
+
+{{#each service}}
+<div>
+    <a href="/quotes/{{_id}}"><p>{{description}}</p></a>
+    <p><span>Status:</span> {{status}}</p>
+    <p><span>Date Created:</span> {{createdAt}}</p>
+</div>
+{{/each}}

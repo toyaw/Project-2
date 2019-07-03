@@ -1,0 +1,27 @@
+<a href="/service">Back To Home Page</a>
+
+<form method="POST" action="/servicce">
+  <div>
+  <!--
+    Template for creating input form for a string object key called stringMember
+    NOTE: for numeric input fields use `type="number"`
+  --->
+  <p>
+  <label for="created-at">Created At:</label>
+  <input type="date" name="createdAt" id="created-at">
+  </p>
+  //<p>
+  //<label for="service-status">Status:</label>
+  //<input type="text" name="status" id="service-status">
+  //</p>
+  <p>
+  <label for="service-priority">Priority Level:</label>
+  <input type="text" name="priority" id="service-priority" placeholder="High, Medium or Low">
+  </p>
+  <p>
+  <p><label for="service-description">Description:</label>
+  <textarea name="description" id="servie-description" cols="30" rows="10"></textarea>
+  </p>
+  </div>
+  <input type="submit" value="Create Service" />
+</form>
